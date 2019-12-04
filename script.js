@@ -1,16 +1,23 @@
+
+
 // possible password values
-var special = "!@#$%&*()_+-=[]|,./?><";
+var special = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 var lower = "abcdefghijklmnopqrstuvwxyz";
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var digits = "0123456789";
-
+var generateBut = document.getElementById("generate");
+var copyBut = document.getElementById("copy")
+var pwdResult = document.getElementById("password")
+function refreshPage() {
+    window.location.reload();
+}
 // User questions for password
+var promptLength = prompt("How many chartacters would you like your password to contain? (8 - 128)");
+var tagLength = parseInt(promptLength,10);
 
-var promptLength = prompt("How many chartacters would you like your password to contain? (8 - 124)");
+console.log(tagLength);
 
-var tagLength = parseInt(promptLength, 10);
-
-
+if(tagLength > 8 && tagLength < 128){
 var tagSpecial = confirm("Click OK to confirm including special characters?");
 console.log(tagSpecial);
 
@@ -51,16 +58,17 @@ else {
     upper = "";
 }
 
+if (!upper && !lower && !special && !digits) {
+ alert ("No characters were selected. Press OK to refresh the page to startover!");
+refreshPage();
 
-var generateBut = document.getElementById("generate");
-var copyBut = document.getElementById("copy")
-var pwdResult = document.getElementById("password")
+}
 
 // chartacter equation
 var characters = (special + digits + lower + upper);
 
-// getting the code to randomize
 
+// getting the code to randomize
 function password(tagLength, characters) {
     var pwd = "";
 
@@ -72,13 +80,15 @@ function password(tagLength, characters) {
     return pwd;
 }
 
+
+
+
+
 // //add password to display
 pwdResult.value = password(tagLength, characters);
 
 // TO GENERATE A NEW PASSWORD WHEN YOU CLICK
-function refreshPage() {
-    window.location.reload();
-}
+
 generateBut.addEventListener("click", refreshPage);
 
 // // To Copy to Clipboard
@@ -87,3 +97,10 @@ generateBut.addEventListener("click", refreshPage);
 //     document.execCommand("generate");
 //   }
 // copyBut.addEventListener("click",copyMe);
+
+}
+else{
+    alert ("Please Select between 8 - 128 character. Press OK to refresh the page to startover!");
+    refreshPage();
+}
+
