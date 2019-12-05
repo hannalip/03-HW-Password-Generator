@@ -1,5 +1,3 @@
-
-
 // possible password values
 var special = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 var lower = "abcdefghijklmnopqrstuvwxyz";
@@ -79,10 +77,8 @@ function password(tagLength, characters) {
 
     return pwd;
 }
-
-
-
-
+//do test to make sure all charcters appear and random
+console.log(password(tagLength, characters));
 
 // //add password to display
 pwdResult.value = password(tagLength, characters);
@@ -91,12 +87,14 @@ pwdResult.value = password(tagLength, characters);
 
 generateBut.addEventListener("click", refreshPage);
 
-// // To Copy to Clipboard
-// function copyMe () {
-//     copyText.select();
-//     document.execCommand("generate");
-//   }
-// copyBut.addEventListener("click",copyMe);
+// To Copy to Clipboard
+function copyMe() {
+    var copyText = document.getElementById("password");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert("Copied the text: " + copyText.value);
+  }
 
 }
 else{
