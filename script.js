@@ -1,4 +1,4 @@
-// possible password values
+// possible password values & global variables
 var special = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 var lower = "abcdefghijklmnopqrstuvwxyz";
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

@@ -1,46 +1,45 @@
 # 03-HW-Password-Generator
 
+* [Screenshot] ![Password Generator](./ScreenShot.png)
+* [`Git Hub](https://github.com/hannalip/03-HW-Password-Generator)
+* [Git Hub](https://hannalip.github.io/03-HW-Password-Generator/)
 * [`HTML`](index.html)
 * [`JavaScript`](script.js)
 * [`CSS`](style.css)
+* [`Background`](background.jpeg)
 
-# Event Bubbling
-
-In this assignment, we are going to create an image carousel that allows us to cycle through images. 
+In this assignment, I am going to create a random password generator using JavaScript.
 
 ## Instructions
 
-* In a file called `index.html`, create a div that contains two buttons: `previous` and `next`. The carousel should support the following features: 
+* In a file called `script.js`
 
-  1. When the `next` button is clicked, the image should change to the next image in the array. If the image has reached the end of the array, the image should start over at the start of the array.
+  1. I created prompts and confirm events for the user. 
 
-  2. When the `previous` button is clicked, the image should change to the previous image in the array. If the image has reached the start of the array, the image should start over at the end of the array.
+  2. When the user has completed the prompts and confirms a random password will generate in box
 
-  3. When the user clicks on an image, they will be navigated to the url that hosts that image.
+  3. When the user clicks on an 'Generate Password' it will filter back to the prompts and confirms or they can click 'Copy to Clipboard' to have it be pasted somewhere.
+
+### Elements within Javascript file
+
+  * variables
+
+  * prompts/confirms
+
+  * IF/ELSE statements
+
+  * For Loop 
+
+  * Math and math.floor
+
+  * Event Listener
+
+  * Functions
 
 
-### Instructions
 
-* Recreate portfolio using Bootstrap CSS Framework. This complete portfoilio will meet the following specifications:
 
-  * A navbar
 
-  * A responsive layout
-
-  * Responsive images
-
-  * Replicate prior portfolio
-
-### This used in HTML from Bootstrap
-
-  * Rows & Column 
-
-  * Nav Bar
-
-  * Form
-
-  * Card
-
-* **NOTE:** Use your CSS file to add own creative elements or make the application more like the pervious file. 
+* **NOTE:** Use your CSS file to add own creativity
 
 
